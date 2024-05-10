@@ -55,7 +55,7 @@ function App() {
     //console.log("check");
     //console.log(setIsAuthenticated);
     try{
-      const response=await fetch("https://devhomoeoback.herokuapp.com/check", {
+      const response=await fetch("https://mahimedsserver.vercel.app/check", {
         method: "POST",
         headers: {
           Authorization : "Bearer " +localStorage.token
@@ -103,7 +103,7 @@ function App() {
   };
   
   async function getData(userId) {
-    const data = await axios.get(`https://devhomoeoback.herokuapp.com/user/${userId}/cart`)
+    const data = await axios.get(`https://mahimedsserver.vercel.app/user/${userId}/cart`)
         .then(promise => {
             return promise.data;
         })
@@ -113,7 +113,7 @@ function App() {
         return data;
 }
 async function getData2() {
-  const data = await axios.get(`https://devhomoeoback.herokuapp.com/admin/products`)
+  const data = await axios.get(`https://mahimedsserver.vercel.app/admin/products`)
       .then(promise => {
           return promise.data;
       })
